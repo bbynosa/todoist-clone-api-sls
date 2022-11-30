@@ -1,0 +1,75 @@
+service: todolist-api
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+  environment:
+    DYNAMODB_TABLE_NAME: todos-${sls:stage}
+  iam:
+    role:
+      statements:
+        - Action:
+            - dynamodb:GetItem
+            - dynamodb:Scan
+            - dynamodb:PutItem
+            - dynamodb:Query
+            - dynamodb:DeleteItem
+          Effect: Allow
+          Resource:
+            Fn::GetAtt:
+              - todosTable
+              - Arn
+  httpApi:
+    cors: true
+functions:
+  getTodos:
+    handler: todos/list.handler
+    events:
+      - httpApi:
+          path: /todos/
+          method: get
+
+  getTodo:
+    handler: todos/get.handler
+    events:
+      - httpApi:
+          path: /todos/{id}
+          method: get
+        
+  postTodo:
+    handler: todos/create.handler
+    events:
+      - httpApi:
+          path: /todos/
+          method: post
+
+  putTodo:
+    handler: todos/update.handler
+    events:
+      - httpApi:
+          path: /todos/{id}
+          method: put
+
+  deleteTodo:
+    handler: todos/delete.handler
+    events:
+      - httpApi:
+          path: /todos/{id}
+          method: delete
+
+resources:
+  Resources:
+    todosTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+        TableName: ${self:provider.environment.DYNAMODB_TABLE_NAME}
