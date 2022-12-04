@@ -6,7 +6,7 @@ provider:
   runtime: python3.8
   environment:
     DYNAMODB_TABLE_NAME: todos-${sls:stage}
-    DYNAMODB_SERVICE_ENDPOINT: dynamodb.us-east-1.amazonaws.com 
+    DYNAMODB_SERVICE_ENDPOINT: https://dynamodb.us-east-1.amazonaws.com 
   iam:
     role:
       statements:
@@ -49,7 +49,7 @@ package:
     - toolist-api/**
     - package**.json
     - README.md
-    
+
 plugins:
   - serverless-dynamodb-local
   - serverless-offline
