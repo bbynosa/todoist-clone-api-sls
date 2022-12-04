@@ -42,7 +42,6 @@ custom:
 plugins:
   - serverless-dynamodb-local
   - serverless-offline
-  - serverless-python-requirements
 functions:
   getTodos:
     handler: todos/list.handler
