@@ -1,0 +1,140 @@
+[
+    {
+        "id": {
+            "S": "62a46bd5-ac7d-4387-91f4-71435d81c962"
+        },
+        "name": {
+            "S": "Cook food"
+        },
+        "status": {
+            "S": "In progress"
+        },
+        "priority": {
+            "S": "Important"
+        },
+        "notes": {
+            "S": "Lorem ipsum"
+        },
+        "created_by": {
+            "S": "Bruce"
+        },
+        "assigned_to": {
+            "S": "Snowy"
+        }
+    },
+    {
+        "id": {
+            "S": "d0ab2879-4016-4659-a7e6-4953258eae92"
+        },
+        "name": {
+            "S": "Wash clothes"
+        },
+        "status": {
+            "S": "Not started"
+        },
+        "priority": {
+            "S": "Urgent"
+        },
+        "notes": {
+            "S": "Lorem ipsum"
+        },
+        "created_by": {
+            "S": "Bruce"
+        },
+        "assigned_to": {
+            "S": "Bruce"
+        }
+    },
+    {
+        "id": {
+            "S": "3601d971-cf17-424b-a086-4d8ecda5b313"
+        },
+        "name": {
+            "S": "Clean room"
+        },
+        "status": {
+            "S": "In progress"
+        },
+        "priority": {
+            "S": "Medium"
+        },
+        "notes": {
+            "S": "Lorem ipsum"
+        },
+        "created_by": {
+            "S": "Bruce"
+        },
+        "assigned_to": {
+            "S": "Papsy"
+        }
+    },
+    {
+        "id": {
+            "S": "38edca94-ccb1-449a-afd9-ccd3d6737b05"
+        },
+        "name": {
+            "S": "Sweep floor"
+        },
+        "status": {
+            "S": "In progress"
+        },
+        "priority": {
+            "S": "Low"
+        },
+        "notes": {
+            "S": "Lorem ipsum"
+        },
+        "created_by": {
+            "S": "Bruce"
+        },
+        "assigned_to": {
+            "S": "Papsy"
+        }
+    },
+    {
+        "id": {
+            "S": "2e318ea2-575a-49b2-ba71-32bbcd928146"
+        },
+        "name": {
+            "S": "Feed dogs"
+        },
+        "status": {
+            "S": "Not started"
+        },
+        "priority": {
+            "S": "Important"
+        },
+        "notes": {
+            "S": "Lorem ipsum"
+        },
+        "created_by": {
+            "S": "Bruce"
+        },
+        "assigned_to": {
+            "S": "Bruce"
+        }
+    },
+    {
+        "id": {
+            "S": "ef964799-bb9c-4f2b-8896-1beb97fcd693"
+        },
+        "name": {
+            "S": "Buy grocery"
+        },
+        "status": {
+            "S": "In progress"
+        },
+        "priority": {
+            "S": "Urgent"
+        },
+        "notes": {
+            "S": "Lorem ipsum"
+        },
+        "created_by": {
+            "S": "Bruce"
+        },
+        "assigned_to": {
+            "S": "Bruce"
+        }
+    }
+]

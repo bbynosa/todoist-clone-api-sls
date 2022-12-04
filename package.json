@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "predebug": "node prepare-debug.js",
+    "debug": "SET SLS_DEBUG=* && node --inspect node_modules\\serverless\\bin\\serverless offline"
+  },
+  "devDependencies": {
+    "serverless-offline": "^11.6.0",
+    "serverless-python-requirements": "^6.0.0"
+  },
+  "dependencies": {
+    "serverless-dynamodb-local": "^0.2.40"
+  }
+}

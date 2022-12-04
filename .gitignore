@@ -18,3 +18,9 @@ var/
 
 # Serverless directories
 .serverless
+node_modules
+.dynamodb
+
+## python
+todolist-api
+**/todos/__pycache__

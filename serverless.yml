@@ -6,6 +6,7 @@ provider:
   runtime: python3.8
   environment:
     DYNAMODB_TABLE_NAME: todos-${sls:stage}
+    DYNAMODB_SERVICE_ENDPOINT: dynamodb.us-east-1.amazonaws.com 
   iam:
     role:
       statements:
@@ -22,12 +23,32 @@ provider:
               - Arn
   httpApi:
     cors: true
+
+custom:
+  dynamodb:
+    stages:
+      - dev
+    start:
+      migrate: true
+      seed: true
+    seed:
+      domain:
+        sources:
+          - table: todos-${sls:stage}
+            rawsources: [./seeds/todos-raw.json]
+  serverless-offline:
+    noTimeout: true
+
+plugins:
+  - serverless-dynamodb-local
+  - serverless-offline
+  - serverless-python-requirements
 functions:
   getTodos:
     handler: todos/list.handler
     events:
       - httpApi:
-          path: /todos/
+          path: /todos
           method: get
 
   getTodo:
@@ -41,7 +62,7 @@ functions:
     handler: todos/create.handler
     events:
       - httpApi:
-          path: /todos/
+          path: /todos
           method: post
 
   putTodo:
