@@ -39,6 +39,17 @@ custom:
   serverless-offline:
     noTimeout: true
 
+package:
+  exclude:
+    - .dynamodb/**
+    - .serverless/**
+    - .vscode/**
+    - node_modules/**
+    - seeds/**
+    - toolist-api/**
+    - package**.json
+    - README.md
+    
 plugins:
   - serverless-dynamodb-local
   - serverless-offline
