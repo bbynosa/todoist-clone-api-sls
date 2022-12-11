@@ -21,8 +21,7 @@ provider:
             Fn::GetAtt:
               - todosTable
               - Arn
-    deploymentRole: 
-      Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/TodolistApi-CloudFormationExecutionRole'
+    deploymentRole: arn:aws:iam::747274377412:role/TodolistApi-CloudFormationExecutionRole
   httpApi:
     cors: true
 
