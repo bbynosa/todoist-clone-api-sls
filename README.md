@@ -2,6 +2,11 @@
 1. Seed local DynamoDB table `sls dynamodb start`
 2. Start local API `sls offline`
 
+
+## Run at local environment
+1. Seed local DynamoDB table `sls dynamodb start`
+2. `sls offline`
+
 ### TODOs
 - store lambda code on src/ directory (DONE)
 - local environment variables on sls yml
