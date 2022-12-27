@@ -1,21 +1,35 @@
-## Run at local environment
-1. Install Serverless Framework on your machine:
+## Install project dependencies
+1. Serverless framework globally
 ``` cli
 npm install -g serverless
 ```
-2. Install project dependencies (for serverless, not for python code):
+1. Npm packages for Serverless
 ``` cli
 npm install
 ```
-3. Install DynamoDB local (separately):
+1. Setup python project virtual environment (venv)
+``` cli
+python3 -m venv .venv
+```
+1. Activate venv (for Windows)
+``` cli
+.venv\Scripts\activate.bat
+```
+1. Python project dependencies
+``` cli
+pip install -r requirements.txt
+```
+1. DynamoDB local
 ``` cli
 sls dynamodb install
 ```
-4. Start local DynamoDB table and seed:
+
+## Run at local environment
+1. Start local DynamoDB table and seed:
  ``` cli
 sls dynamodb start
 ```
-5. Start local API:
+2. Start local API:
 ```cli
 sls offline
 ```
