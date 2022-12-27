@@ -3,23 +3,23 @@
 ``` cli
 npm install -g serverless
 ```
-1. Npm packages for Serverless
+2. Npm packages for Serverless
 ``` cli
 npm install
 ```
-1. Setup python project virtual environment (venv)
+3. Setup python project virtual environment (venv)
 ``` cli
 python3 -m venv .venv
 ```
-1. Activate venv (for Windows)
+4. Activate venv (for Windows)
 ``` cli
 .venv\Scripts\activate.bat
 ```
-1. Python project dependencies
+5. Python project dependencies
 ``` cli
 pip install -r requirements.txt
 ```
-1. DynamoDB local
+6. DynamoDB local
 ``` cli
 sls dynamodb install
 ```
