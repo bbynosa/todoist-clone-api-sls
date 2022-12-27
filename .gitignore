@@ -23,4 +23,5 @@ node_modules
 
 ## python
 todolist-api
-**/todos/__pycache__
+*__pycache__*
+.venv/
