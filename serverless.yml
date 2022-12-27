@@ -58,35 +58,35 @@ plugins:
   - serverless-offline
 functions:
   getTodos:
-    handler: todos/list.handler
+    handler: src/list.handler
     events:
       - httpApi:
           path: /todos
           method: get
 
   getTodo:
-    handler: todos/get.handler
+    handler: src/get.handler
     events:
       - httpApi:
           path: /todos/{id}
           method: get
         
   postTodo:
-    handler: todos/create.handler
+    handler: src/create.handler
     events:
       - httpApi:
           path: /todos
           method: post
 
   putTodo:
-    handler: todos/update.handler
+    handler: src/update.handler
     events:
       - httpApi:
           path: /todos/{id}
           method: put
 
   deleteTodo:
-    handler: todos/delete.handler
+    handler: src/delete.handler
     events:
       - httpApi:
           path: /todos/{id}
